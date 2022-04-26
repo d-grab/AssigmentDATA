@@ -6,8 +6,8 @@ import Home from './pages/Home'
 import BookScreen from './pages/BookScreen'
 import BasketScreen from './pages/BasketScreen'
 import LoginPage from './pages/LoginPage';
-import RegisterScreen from './pages/RegisterScreen';
-import ProfileScreen from './pages/ProfileScreen';
+import RegisterPage from './pages/RegisterPage';
+import ProfilePage from './pages/ProfilePage';
 import DeliveryPage from './pages/DeliveryPage';
 import PaymentPage from './pages/PaymentPage';
 import MakeOrderPage from './pages/MakeOrderPage';
@@ -29,11 +29,11 @@ const App =()=> {
         <Route path='/order/:id' component={OrderPage}/>
         <Route path='/payment' component={PaymentPage}/>
         <Route path='/delivery' component={DeliveryPage}/>
-        <Route path='/register' component={RegisterScreen}/>
+        <Route path='/register' component={RegisterPage}/>
         <Route path='/book/:id' component={BookScreen} />
         <Route path= '/basket/:id?' component={BasketScreen}/>
         <Route path= '/login' component={LoginPage}/>
-        <Route path= '/profile' component={ProfileScreen}/>
+        <Route path= '/profile' component={ProfilePage}/>
         <Route path= '/admin/userlist' component={ListOfUsersPage}/>
         <Route path= '/admin/user/:id/edit' component={EditUserPage}/>
         <Route path= '/admin/productlist' component={ListOfBooksPage}/>

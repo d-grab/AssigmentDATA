@@ -11,7 +11,7 @@ import { LinkContainer } from 'react-router-bootstrap'
 
 
 
-const ProfileScreen = ({location,history}) => {
+const ProfilePage = ({location,history}) => {
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
@@ -22,7 +22,7 @@ const ProfileScreen = ({location,history}) => {
     const dispatch = useDispatch()
 
     const userDetails = useSelector((state) => state.userDetails)
-    const { loading, error, user } = userDetails
+    const { user } = userDetails
   
     const userLogin = useSelector((state) => state.userLogin)
     const { userInfo } = userLogin
@@ -144,4 +144,4 @@ useEffect(() => {
     
   
 }
-export default ProfileScreen
+export default ProfilePage

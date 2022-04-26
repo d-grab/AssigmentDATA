@@ -1,3 +1,65 @@
+## Backend modules
+I use ECMAScript Modules for backed to covert common JS to import JS. for example in server.js instead of using 
+```javascript
+const express = require('express)
+``` 
+I can use 
+```javascript
+import express from 'express'
+```
+
+The only thing we have to remember is to add .js when we importing files not packages 
+To be able to use that module I added in root folder package.json,  line
+```javascript
+"type": "module"
+```
+ [https://nodejs.org/api/esm.html], [https://nodejs.org/api/packages.html]
+
+## .ENV variables
+.env is located in the root folder and includes DATABASE_URI for mongo database online. where username and login is admin
+
+
+```javascript
+NODE_ENV = development
+DATABASE_URI= mongodb+srv://admin:admin@cluster0.8tm77.mongodb.net/E-BookShop?retryWrites=true&w=majority
+PORT = 5000
+JWT_SECRET = abc123
+PAYPAL_CLIENT_ID =AS39RJrcSs2n7YPi2I7lKorhqhm8q7n1B-pkvc4jepbYwzGy16j6DOVv8JoNNMiSoWjA1q35QdHb7e5-
+```
+
+# Running project in development mode
+
+To run frontend : (running on port : 3000)
+npm run client
+
+To run backend : (running on port: 5000)
+npm run server
+
+To run backend and fronend 
+npm run dev
+
+To run backend and frontend in the same time I created script in package.json 
+```javascript
+"dev": "concurrently \"npm run server\" \"npm run client\"",
+```
+
+# Running project in production mode
+
+In .env file we need to change from 
+```javascript
+NODE_ENV = development
+```
+to :
+```javascript
+NODE_ENV = production
+```
+
+In root /backend we need to run in terminal :
+
+npm start
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

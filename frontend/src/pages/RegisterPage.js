@@ -8,7 +8,7 @@ import {register} from '../actions/userActions'
 import FormContainer from '../components/FormContainer'
 
 
-const RegisterScreen = (props) => {
+const RegisterPage = (props) => {
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
@@ -94,4 +94,4 @@ const RegisterScreen = (props) => {
     
   
 }
-export default RegisterScreen
+export default RegisterPage
