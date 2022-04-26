@@ -1,0 +1,42 @@
+/*  @media (min-width: 1200px) {
+    .container{
+max-width: 970px;
+    }
+}*/
+.main {
+    margin-top: 5vh;   
+}
+.rating span {
+    margin: 2px;
+}
+h1 {
+    font-size: 50px;
+    padding-bottom: 5%;
+    padding-top: 5%;
+}
+
+
+h4 {
+    color: aliceblue;
+   
+}
+.nav-link.first{
+    
+    font-weight: bold;
+    color: black !important;
+  }
+.link.first {
+    font-weight: bold;
+    color: black !important;
+}
+.drop{
+    margin: 50px;
+    color: #fff;
+}
+.col.total {
+    margin-top: 10px;
+} 
+h1.orders {
+    text-align: center;
+    padding-top: 1rem;
+}
