@@ -31,9 +31,8 @@ if(process.env.NODE_ENV === 'production') {
 
 }else {
    // routes
-app.get('/', (req,res) => {
-    res.send ('Api is running')
-}) 
+    app.get('/', (req,res) => {
+        res.send ('Api is running')}) 
 }
 
 // use port from .env or if not found use port 5000 anyway
