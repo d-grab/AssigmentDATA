@@ -1,6 +1,6 @@
 import express from 'express'
 import dotenv from 'dotenv'
-import morgan from 'morgan'
+
 import bookRoutes from './routes/bookRoutes.js'
 import userRoutes from './routes/userRoutes.js'
 import orderRoutes from './routes/orderRoutes.js'
@@ -14,9 +14,7 @@ const app = express()
 //Database connection
 connectDB()
 
-if (process.env.NODE_ENV === 'development') {
-    app.use(morgan('dev'))
-  }
+
 
 app.use(express.json())
 app.use('/api/books', bookRoutes)
