@@ -1,5 +1,6 @@
 import express from 'express'
 import dotenv from 'dotenv'
+import morgan from 'morgan'
 import bookRoutes from './routes/bookRoutes.js'
 import userRoutes from './routes/userRoutes.js'
 import orderRoutes from './routes/orderRoutes.js'
@@ -13,7 +14,9 @@ const app = express()
 //Database connection
 connectDB()
 
-
+if (process.env.NODE_ENV === 'development') {
+    app.use(morgan('dev'))
+  }
 
 app.use(express.json())
 app.use('/api/books', bookRoutes)
@@ -38,6 +41,6 @@ if(process.env.NODE_ENV === 'production') {
 // use port from .env or if not found use port 5000 anyway
 const PORT = process.env.PORT || 5000
 
-app.listen(5000, console.log(`server running on port ${PORT}`))
+app.listen(PORT, console.log(`server running on port ${PORT}`))
 
 
