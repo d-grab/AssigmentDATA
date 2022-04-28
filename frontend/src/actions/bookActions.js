@@ -203,3 +203,23 @@ export const removeBook = (id) => async (dispatch, getState) => {
                   }
                 }
 
+                export const SearchBooks = (searchkey, category) => async (dispatch) => {
+                  dispatch({ type: BOOK_LIST_REQUEST });
+                
+                  try {
+                    var filteredBooks;
+                    const response = await axios.get(`/api/books`);
+                    filteredBooks = response.data.filter((books) =>
+                      books.name.includes(searchkey)
+                    );
+                    if (category !== "all") {
+                      filteredBooks = response.data.filter(
+                        (books) => books.category === category
+                      );
+                    }
+                    dispatch({ type: BOOK_LIST_SUCCESS, payload: filteredBooks });
+                  } catch (error) {
+                    dispatch({ type: BOOK_LIST_FAIL, payload: error });
+                  }
+                };
+                

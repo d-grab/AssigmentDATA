@@ -58,7 +58,7 @@ const BookScreen = ({ history, match}) => {
       <>
     <Row>
     <Col md={6}>
-        <Image src={book.image} alt={book.name} fluid />
+        <Image src={book.image} alt={book.name}  />
     </Col>
     <Col md={3}>
         <ListGroup variant='flush'>

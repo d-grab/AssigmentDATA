@@ -24,6 +24,7 @@ const Home = ({match}) => {
 
     return (
         <>
+        
         <h1>All products</h1>
         {loading ?( <Loading /> ): error ?(<Message variant='danger'>{error}</Message> ):( <Row>
             {books.map(product => (

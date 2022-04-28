@@ -1,10 +1,10 @@
 import React from 'react'
 import {useDispatch,useSelector} from 'react-redux'
-import {Navbar, Nav, Container, NavDropdown,} from 'react-bootstrap'
+import {Navbar, Nav, Container, NavDropdown, } from 'react-bootstrap'
 import {LinkContainer} from 'react-router-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import {logout} from '../actions/userActions'
-import SearchBar from './SearchBar'
+import Filter from './Filter'
 
 const Header = () => {
   const dispatch = useDispatch()
@@ -15,22 +15,26 @@ const Header = () => {
     dispatch(logout())
   }
   return (
-    <header><Navbar bg="dark" variant="dark"  collapseOnSelect >
-    <Container fluid>
+    <header><Navbar bg="dark" variant="dark" expand={false} collapseOnSelect  >
+      
+    <Container > 
+      
       <LinkContainer to='/'>
-      <Navbar.Brand ><strong><h2>Student Books </h2> </strong></Navbar.Brand>
+      <Navbar.Brand ><strong><h3 >Student Books</h3>  </strong></Navbar.Brand>
       </LinkContainer>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
-      <Navbar.Collapse id="basic-navbar-nav">
-        <SearchBar />
+      <Navbar.Collapse id="basic-navbar-nav" >
+      < Filter />
+        
       <Nav className="ms-auto">
-        <LinkContainer to='/basket'>
-        <Nav.Link><i className= "fas fa-shopping-cart"></i>     Basket</Nav.Link>
+        <LinkContainer  to='/basket' className="ms-auto">
+        <Nav.Link className='icon'><i className= "fas fa-shopping-cart" ></i>     Basket</Nav.Link>
         </LinkContainer>
         {userInfo ? (
-          <NavDropdown  title={userInfo.name} id ='username'>
+    
+          <NavDropdown  title={userInfo.name} id ='username' menuVariant="dark"  className="ms-auto">
             <LinkContainer to= '/profile'>
-              <NavDropdown.Item >Profile</NavDropdown.Item>
+              <NavDropdown.Item className="ms-auto"  >Profile</NavDropdown.Item>
             </LinkContainer>
             <NavDropdown.Item onClick={logoutHandler}>Logout
             </NavDropdown.Item>
@@ -39,7 +43,7 @@ const Header = () => {
         <Nav.Link><i className = "fas fa-user"></i>  Login</Nav.Link>
         </LinkContainer>} 
         {userInfo && userInfo.isAdmin&&  (
-          <NavDropdown  title='Admin Panel' id ='adminmenu'>
+          <NavDropdown  title='Admin Panel' id ='adminmenu' menuVariant="dark" className="ms-auto">
           <LinkContainer to= '/admin/userlist'>
             <NavDropdown.Item >Edit Users</NavDropdown.Item>
           </LinkContainer>
