@@ -40,7 +40,7 @@ const Header = () => {
             </NavDropdown.Item>
           </NavDropdown>
         ) : <LinkContainer to='/login'>
-        <Nav.Link><i className = "fas fa-user"></i>  Login</Nav.Link>
+        <Nav.Link className="ms-auto"><i className = "fas fa-user"></i>  Login</Nav.Link>
         </LinkContainer>} 
         {userInfo && userInfo.isAdmin&&  (
           <NavDropdown  title='Admin Panel' id ='adminmenu' menuVariant="dark" className="ms-auto">
