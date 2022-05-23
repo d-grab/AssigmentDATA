@@ -41,14 +41,18 @@ PAYPAL_CLIENT_ID =AS39RJrcSs2n7YPi2I7lKorhqhm8q7n1B-pkvc4jepbYwzGy16j6DOVv8JoNNM
 # Running project in development mode
 
 To run frontend : (running on port : 3000)
--npm run client
+```
+npm run client
+```
 
 To run backend : (running on port: 5000)
--npm run server
-
+```
+npm run server
+```
 To run backend and fronend 
--npm run dev
-
+```
+npm run dev
+```
 To run backend and frontend in the same time I created script in package.json 
 ```javascript
 "dev": "concurrently \"npm run server\" \"npm run client\"",
