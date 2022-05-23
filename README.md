@@ -1,22 +1,29 @@
-## Backend modules
-I use ECMAScript Modules for backed to covert common JS to import JS. for example in server.js instead of using 
-```javascript
-const express = require('express)
-``` 
-I can use 
-```javascript
-import express from 'express'
-```
+## First Step 
 
-The only thing we have to remember is to add .js when we importing files not packages 
-To be able to use that module I added in root folder package.json,  line
-```javascript
-"type": "module"
-```
- [https://nodejs.org/api/esm.html], [https://nodejs.org/api/packages.html]
+To run the project, we have to download a zip file from the GitHub repository which contain all of the web application files
+![GitHubStep1](https://res.cloudinary.com/dwc3fiaro/image/upload/v1653314819/Report/GitHub_Step1_rxby41.jpg)
 
-## .ENV variables
-.env is located in the root folder and includes DATABASE_URI for mongo database online. where username and login is admin
+After we downloaded the project we need to unpack to any location on our disk drive. We need to install ["NodeJS"](https://nodejs.org/en/download/) on our computer
+and choose a correct version.
+
+## Second Step
+
+In the Visual Studio Code we need to open the project containing all of the files. After loading successfully to Visual Studio we should install all dependencies for frontend and backend that are located in package.json files .
+
+In root /backend and /frontend we need to run in terminal :
+```javascript
+npm install
+cd frontend
+npm install
+```
+![Step2](https://res.cloudinary.com/dwc3fiaro/image/upload/v1653315415/Report/Step2_jwjotd.jpg)
+
+## Third Step
+
+### .ENV variables
+
+Next step is to create .env file including the code below
+.env is located in the root folder and includes DATABASE_URI for mongo database online. where username and login is admin.
 
 
 ```javascript
@@ -26,6 +33,9 @@ PORT = 5000
 JWT_SECRET = abc123
 PAYPAL_CLIENT_ID =AS39RJrcSs2n7YPi2I7lKorhqhm8q7n1B-pkvc4jepbYwzGy16j6DOVv8JoNNMiSoWjA1q35QdHb7e5-
 ```
+
+![.envFile](https://res.cloudinary.com/dwc3fiaro/image/upload/v1653315669/Report/.ENV_file_tcw59l.jpg)
+
 
 # Running project in development mode
 
@@ -60,9 +70,35 @@ to :
 NODE_ENV = production
 ```
 
-In root /backend we need to run in terminal :
 
-npm start
+
+
+## Backend modules
+I use ECMAScript Modules for backed to covert common JS to import JS. for example in server.js instead of using 
+```javascript
+const express = require('express)
+``` 
+I can use 
+```javascript
+import express from 'express'
+```
+
+The only thing we have to remember is to add .js when we importing files not packages 
+To be able to use that module I added in root folder package.json,  line
+```javascript
+"type": "module"
+```
+ [https://nodejs.org/api/esm.html], [https://nodejs.org/api/packages.html]
+
+
+
+
+
+
+
+
+
+
 
 
 
