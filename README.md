@@ -93,7 +93,7 @@ In order to use that module I added in root folder package.json,  line
 ```javascript
 "type": "module"
 ```
-[ECMA Moodule](https://nodejs.org/api/esm.html), [https://nodejs.org/api/packages.html]
+[ECMA Moodule](https://nodejs.org/api/esm.html), [Package Instructions](https://nodejs.org/api/packages.html)
 
 
 
