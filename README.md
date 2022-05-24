@@ -88,8 +88,8 @@ I can use
 import express from 'express'
 ```
 
-The only thing we have to remember is to add .js when we importing files not packages 
-To be able to use that module I added in root folder package.json,  line
+The only thing we have to remember is to add .js when we importing files, not packages .
+In order to use that module I added in root folder package.json,  line
 ```javascript
 "type": "module"
 ```
