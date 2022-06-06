@@ -97,7 +97,7 @@ npm run build
 ```       
 ![BuildProduction](https://res.cloudinary.com/dwc3fiaro/image/upload/v1654529566/Report/NPM_BUILD_xfwxqj.jpg)
 
-After successfully running ```npm run build``` in root folder we can type in command  ```npm start``` <br>
+After successfully running ```npm run build``` , in the root folder we can type in command  ```npm start``` <br>
 
 
 Our application will run on  ``` port 5000```
