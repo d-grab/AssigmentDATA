@@ -37,7 +37,7 @@ PAYPAL_CLIENT_ID =AS39RJrcSs2n7YPi2I7lKorhqhm8q7n1B-pkvc4jepbYwzGy16j6DOVv8JoNNM
 
 ![.envFile](https://res.cloudinary.com/dwc3fiaro/image/upload/v1653315669/Report/.ENV_file_tcw59l.jpg)
 
-# Connecting with Cluster in MOongoDb Compass
+# Connecting with Cluster in MongoDb Compass
 
 To establish a new connection with dabase and see all of the data and collection we have to use a link to the Collection from .env file 
 
