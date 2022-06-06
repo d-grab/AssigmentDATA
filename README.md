@@ -37,6 +37,26 @@ PAYPAL_CLIENT_ID =AS39RJrcSs2n7YPi2I7lKorhqhm8q7n1B-pkvc4jepbYwzGy16j6DOVv8JoNNM
 
 ![.envFile](https://res.cloudinary.com/dwc3fiaro/image/upload/v1653315669/Report/.ENV_file_tcw59l.jpg)
 
+# Connecting with Cluster in MOongoDb Compass
+
+To establish a new connection with dabase and see all of the data and collection we have to use a link to the Collection from .env file 
+
+``` mongodb+srv://admin:admin@cluster0.8tm77.mongodb.net/E-BookShop?retryWrites=true&w=majority ```
+
+***where :***  <br>
+
+username - admin <br>
+password - admin
+
+![ConnectedCompass](https://res.cloudinary.com/dwc3fiaro/image/upload/v1654528552/Report/MONGO_COMPASS_CONNECTION_idffew.jpg)
+
+## After successfull connection we should be able to see this window 
+
+![AfterConnection](https://res.cloudinary.com/dwc3fiaro/image/upload/v1654528640/Report/MONGO_AFTER_CONNECTED_afotg4.jpg)
+
+
+
+
 
 # Running project in development mode
 
@@ -59,12 +79,6 @@ To run backend and frontend in the same time I created script in package.json
 ```
 
 # Running project in production mode
-We need to create build for production typing
-```
-npm run build
-```       
-in /frontend
-
 
 In .env file we need to change from 
 ```javascript
@@ -75,6 +89,25 @@ to :
 NODE_ENV = production
 ```
 
+![ProductionMmode](https://res.cloudinary.com/dwc3fiaro/image/upload/v1654529275/Report/productionMODE_fvz6i2.jpg)
+
+We need to create build for production typing in ```/frontend```
+```
+npm run build
+```       
+![BuildProduction](https://res.cloudinary.com/dwc3fiaro/image/upload/v1654529566/Report/NPM_BUILD_xfwxqj.jpg)
+
+After successfully running ```npm run build``` in root folder we can type in command  ```npm start``` <br>
+
+
+Our application will run on  ``` port 5000```
+
+![npmSTART](https://res.cloudinary.com/dwc3fiaro/image/upload/v1654529752/Report/NPM_START_vaebt4.jpg)
+
+![RunningProduction](https://res.cloudinary.com/dwc3fiaro/image/upload/v1654529830/Report/RUNNING_PRODUCTION_hu1rcd.jpg)
+
+
+
 
 
 
@@ -83,16 +116,18 @@ I use ECMAScript Modules for backed to covert common JS to import JS. for exampl
 ```javascript
 const express = require('express)
 ``` 
-I can use 
+We can use 
 ```javascript
 import express from 'express'
 ```
 
 The only thing we have to remember is to add .js when we importing files, not packages .
 In order to use that module I added in root folder package.json,  line
+
 ```javascript
 "type": "module"
 ```
+
 [ECMA Moodule](https://nodejs.org/api/esm.html), [Package Instructions](https://nodejs.org/api/packages.html)
 
 
